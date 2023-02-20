@@ -1,10 +1,10 @@
 #include <stdlib.h>
-#include <time.h>
+#include <unistd.h>
 #include <stdio.h>
 
 /**
  * main - Entry.
- * Return: Always 0 (Success)
+ * Return: Always 1 (Success)
  */
 
 int main(void)
