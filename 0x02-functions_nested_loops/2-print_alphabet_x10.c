@@ -4,7 +4,7 @@
  * print_alphabet_10 - print alphabet 10 times
  * Return: void
  */
-void print_alphabet_10(void)
+void print_alphabet_x10(void)
 {
 char x;
 int y = 0;
