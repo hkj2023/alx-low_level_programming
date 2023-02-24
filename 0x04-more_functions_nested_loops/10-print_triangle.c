@@ -8,22 +8,23 @@
 
 void print_triangle(int n)
 {
-int a, b, c;
 if (n <= 0)
 {
 _putchar('\n');
+} else
+{
+int i, j;
+for (i = 1; i <= n; i++)
+{
+for (j = i; j < n; j++)
+{
+_putchar(' ');
 }
-else
+for (j = 1; j <= i; j++)
 {
-for (a = 0; a < n; a++)
-for (b = n - a; b > 1; b--)
-{
-_putchar(32);
-}
-for (c = 0; c <= a; c++)
-{
-_putchar(35);
+_putchar('#');
 }
 _putchar('\n');
+}
 }
 }
