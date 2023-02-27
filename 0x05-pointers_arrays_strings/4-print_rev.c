@@ -3,6 +3,9 @@
 /**
  * print_rev - prints a string in reverse order
  * @s: string to be printed
+ * @leng the length of string
+ * @i array of i
+ * @j the length of the array
  */
 void print_rev(char *s)
 {
