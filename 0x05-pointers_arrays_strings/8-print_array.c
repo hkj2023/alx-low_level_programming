@@ -4,9 +4,10 @@
 /**
  * print_array - print arrays element
  * @n array of integer
- * @c array of pointer
+ * @c: array of pointer
  * @n: int type integer
  * Return Alwys 0 (Success).
+ * Description: all elements should be listed
  */
 
 void print_array(int *c, int n)
