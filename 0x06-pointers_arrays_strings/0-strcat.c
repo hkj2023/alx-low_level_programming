@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _strcat - concatenating string
- * @dst: destination.
+ * @dest: destination.
  * @src: source.
  * @a - the first counter
  * @b - the second counter
