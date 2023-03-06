@@ -9,20 +9,21 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-unsigned int a, b, c;
-for (a = 0; *(s + a) != '\0'; a++)
+unsigned int i, flag;
+i = 0, flag = 0;
+while (*s)
 {
-c = 1;
-for (b = 0; *(accept + b) != '\0'; b++)
+for (i = 0; accept[i]; i++)
 {
-if (*(s + b) == *(accept + b))
+if (*s == accept[i])
 {
-c = 0;
+flag++;
 break;
 }
+else if (accept[i + 1] == '\0')
+return (flag);
 }
-if (c == 1)
-break;
+s++;
 }
-return (a);
+return (flag);
 }
