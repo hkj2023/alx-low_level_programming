@@ -12,5 +12,7 @@ int wildcmp(char *s1, char *s2);
 int is_palindrome(char *s);
 void _putchar(int c);
 int _sqrt(int n, int a);
+int is_even(int num, int ev);
+
 
 #endif
