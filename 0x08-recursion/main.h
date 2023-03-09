@@ -13,6 +13,6 @@ int is_palindrome(char *s);
 void _putchar(int c);
 int _sqrt(int n, int a);
 int is_even(int num, int ev);
-
+int palindrome(char *s, int p);
 
 #endif
