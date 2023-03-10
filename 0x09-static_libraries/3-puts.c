@@ -1,13 +1,15 @@
 #include "main.h"
-void _puts(char *str)
-#include<stdio.h>
 
 /**
  * main - puts function
  * Return: Always 0 (Success)
  */
-int main(void)
+void _puts(char *str)
 {
-puts("\"Programming is like building a multilingual puzzle");
-return (0);
+while (*str != '\0')
+{
+_putchar(*str);
+str++;
+}
+_putchar('\n');
 }
