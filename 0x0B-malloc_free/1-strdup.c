@@ -15,11 +15,12 @@ char *strdup;
 unsigned int x, y;
 if (str == NULL)
 return (NULL);
-for (x = 0; str[x] != '\0'; x++)
+for (x = 0; str[x]; x++)
 strdup = (char *)malloc(sizeof(char) * (x + 1));
 if (strdup == NULL)
 return (NULL);
 for (y = 0; y <= x; y++)
 strdup[y] = str[y];
 return (strdup);
+free(strdup);
 }
