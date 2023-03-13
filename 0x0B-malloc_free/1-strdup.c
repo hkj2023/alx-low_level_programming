@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "main.h"
 #include <string.h>
+
 /**
  * _strdup - to duplicate the string;
  * @str: -the dtring chacter
@@ -11,16 +12,19 @@
  */
 char *_strdup(char *str)
 {
-char *strdup;
-unsigned int x, y;
+char *str_dup;
+int i, length;
 if (str == NULL)
 return (NULL);
-for (x = 0; str[x]; x++)
-strdup = (char *)malloc(sizeof(char) * (x + 1));
-if (strdup == NULL)
+length = 0;
+for (i = 0; str[i]; i++)
+length++;
+str_dup = malloc(sizeof(char) * (length + 1));
+if (str_dup == NULL)
 return (NULL);
-for (y = 0; y <= x; y++)
-strdup[y] = str[y];
-return (strdup);
-free(strdup);
+
+for (i = 0; str[i]; i++)
+str_dup[i] = str[i];
+str_dup[length] = '\0';
+return (str_dup);
 }
