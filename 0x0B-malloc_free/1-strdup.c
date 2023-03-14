@@ -19,7 +19,7 @@ return (NULL);
 length = 0;
 for (i = 0; str[i]; i++)
 length++;
-str_dup = malloc(sizeof(char) * (length + 1));
+str_dup = (char*)malloc(sizeof(char) * (length + 1));
 if (str_dup == NULL)
 return (NULL);
 
