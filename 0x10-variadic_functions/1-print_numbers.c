@@ -22,6 +22,6 @@ printf("%d", va_arg(apt, int));
 if (i != (n - 1) && separator != NULL)
 printf("%s", separator);
 }
-printf("\n");
+putchar('\n');
 va_end(apt);
 }
