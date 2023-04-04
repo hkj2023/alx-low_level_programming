@@ -1,12 +1,12 @@
 #include "lists.h"
 
 /**
- * add_node_end - to add node at the end
+ * add_nodeint_end - to add node at the end
  * @head: the first node of a list
- * @str: the string to be inserted
+ * @n: the integer to be inserted
  * Return: Always 0 (Success)
- *
  */
+
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
 listint_t *new, *last;
