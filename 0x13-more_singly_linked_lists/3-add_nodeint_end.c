@@ -5,24 +5,24 @@
  * @head: the first node of a list
  * @str: the string to be inserted
  * Return: Always 0 (Success)
+ *
  */
-
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-listint_t *hd, *tail;
-hd = malloc(sizeof(listint_t));
-if (hd == NULL)
+listint_t *new, *last;
+new = malloc(sizeof(listint_t));
+if (new == NULL)
 return (NULL);
-hd->n = n;
-hd->next = NULL;
-if (*hd == NULL)
-*head = hd;
+new->n = n;
+new->next = NULL;
+if (*head == NULL)
+*head = new;
 else
 {
-tail = *head;
-while (tail->next != NULL)
-tail = tail->next;
-tail->next = hd;
+last = *head;
+while (last->next != NULL)
+last = last->next;
+last->next = new;
 }
 return (*head);
 }
