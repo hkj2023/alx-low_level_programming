@@ -8,10 +8,9 @@
 unsigned int binary_to_uint(const char *b)
 {
 unsigned int result = 0;
-int i = 0, j;
+int i = 0;
 if (b[i] == '\0')
 return (0);
-for (j = 0; j <= i; j++)
 if ((b[i] == '0') || (b[i] == '1'))
 {
 result <<= 1;
