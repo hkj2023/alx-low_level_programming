@@ -5,18 +5,17 @@
  * @b: character
  * Return: Always 0 (Success)
  */
-
 unsigned int binary_to_uint(const char *b)
 {
 unsigned int result;
-int i;
+int i,j;
 i = 0, result = 0;
-if (b == NULL)
+if (b[i] == '\0')
 return (0);
-while ((b[i] == '0' || b[i] == '1'))
-{
+for (j=0;j<=i;j++)
+if((b[i] == '0' || b[i] == '1'))  {
 result <<= 1;
-result = result + b[i] - '0';
+result += b[i] - '0';
 i++;
 }
 return (result);
