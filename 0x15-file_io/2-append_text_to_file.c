@@ -18,9 +18,9 @@ i = 0;
 if (text_content)
 {
 while (text_content[i])
-w = write(o, text_content, i);
 i++;
 }
+w = write(o, text_content, i);
 if (w == -1 || o == -1)
 {
 return (-1);
