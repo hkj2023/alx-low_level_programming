@@ -23,7 +23,7 @@ return (-1);
 i = 0;
 if (text_content != NULL)
 {
-	fo (i = 0; text_content[i] != '\0')
+for (; text_content[i];)
 i++;
 }
 w = write(o, text_content, i);
@@ -31,6 +31,7 @@ if (w == -1 || w != i)
 {
 return (-1);
 }
+else
 close(o);
 return (1);
 }
