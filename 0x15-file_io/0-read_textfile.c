@@ -18,17 +18,24 @@ if (o == 0)
 return (0);
 content = malloc(sizeof(char) * (letters + 1));
 if (content == NULL)
+{
 close(o);
 return (0);
-
+}
 r = read(o, content, letters);
 if (r == -1)
+{
 close(o);
 free(content);
 return (0);
+}
 w =  write(STDOUT_FILENO, content, r);
 if (w == -1 || w != r)
+{
 close(o);
 free(content);
-return (0);
+}
+close(o);
+free(content);
+return (w);
 }
