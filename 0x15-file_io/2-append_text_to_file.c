@@ -22,12 +22,11 @@ i = 0;
 w = write(o, text_content, i);
 if (text_content != NULL)
 {
-for (; text_content[i] ;)
+for (i = 0 ; text_content[i] ;)
 i++;
 }
 if (w == -1 || o == -1)
 return (-1);
-else
 close(o);
 return (1);
 }
