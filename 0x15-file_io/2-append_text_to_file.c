@@ -11,13 +11,9 @@
 int append_text_to_file(const char *filename, char *text_content)
 {
 int o, w, i;
-if (filename == NULL || text_content == NULL)
+if (filename == NULL)
 return (-1);
 o = open(filename, O_WRONLY | O_APPEND);
-if (filename == NULL)
-{
-return (-1);
-}
 i = 0;
 if (text_content)
 {
@@ -26,7 +22,9 @@ w = write(o, text_content, i);
 i++;
 }
 if (w == -1 || o == -1)
+{
 return (-1);
+}
 close(o);
 return (1);
 }
