@@ -20,18 +20,17 @@ if (o == -1)
 {
 return (-1);
 }
+i = 0;
 if (text_content != NULL)
 {
-i = 0;
-}
-while (text_content[i] != '\0')
-{
+	fo (i = 0; text_content[i] != '\0')
 i++;
 }
 w = write(o, text_content, i);
 if (w == -1 || w != i)
-close(o);
+{
 return (-1);
+}
 close(o);
 return (1);
 }
