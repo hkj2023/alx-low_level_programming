@@ -19,10 +19,10 @@ if (filename == NULL)
 return (-1);
 }
 i = 0;
-w = write(o, text_content, i);
-if (text_content != NULL)
+if (text_content)
 {
-for (i = 0 ; text_content[i] ;)
+while (text_content[i])
+w = write(o, text_content, i);
 i++;
 }
 if (w == -1 || o == -1)
