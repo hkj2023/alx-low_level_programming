@@ -33,7 +33,7 @@ int j = 0;
 printf("Magic: ");
 while (j < EI_NIDENT)
 {
-printf("%02j", e_ident[j]);
+printf("%02x", e_ident[j]);
 if (j == EI_NIDENT - 1)
 printf("\n");
 else
@@ -248,7 +248,7 @@ exit(98);
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
 Elf64_Ehdr *header;
-int file_Open, file_read;
+int file_open, file_read;
 file_open = open(argv[1], O_RDONLY);
 if (file_open == -1)
 {
